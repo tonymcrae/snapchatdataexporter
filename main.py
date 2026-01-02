@@ -39,10 +39,7 @@ def download_media(item, index):
 def main():
     items = load_json(JSON_PATH, ITEMS_KEY)
     index = 1
-    success_count = 0
     for item in items:
         ok = download_media(item, index)
-        if ok:
-            success_count += 1
         index += 1
 main()
